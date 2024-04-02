@@ -12,7 +12,7 @@ const DataContext = createContext({});
 export const api = {
   loadData: async () => {
     const json = await fetch("/events.json");
-    return json.json();
+    return json.json(); 
   },
 };
 
@@ -48,6 +48,6 @@ DataProvider.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const useData = () => useContext(DataContext);
+export const useData = () =>  useContext(DataContext);
 
 export default DataContext;
