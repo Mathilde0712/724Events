@@ -16,10 +16,12 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    // permet d'afficher dans le dev tools les valeurs choisies
+    onChange(newValue); 
     setValue(newValue);
     setCollapsed(newValue);
   };
+
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}
@@ -50,6 +52,7 @@ const Select = ({
           )}
         </ul>
         <input type="hidden" value={value || ""} name={name} />
+        
         <button
           type="button"
           data-testid="collapse-button-testid"

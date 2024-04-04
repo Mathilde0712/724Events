@@ -47,6 +47,7 @@ const Form = ({ onSuccess, onError }) => {
             placeholder="message"
             label="Message"
             type={FIELD_TYPES.TEXTAREA}
+           
           />
         </div>
       </div>
