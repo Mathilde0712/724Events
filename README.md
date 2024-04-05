@@ -15,7 +15,7 @@ Le design a été validé, et un premier développeur freelance a commencé l’
 
 Ma mission : débugger un site web et rédiger le cahier de recette pour tester le site.
 
-## Outis utilisés
+## Outils utilisés
 
 - React
 - CSS
