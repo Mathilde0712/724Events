@@ -19,7 +19,8 @@ const Select = ({
     // permet d'afficher dans le dev tools les valeurs choisies
     onChange(newValue); 
     setValue(newValue);
-    setCollapsed(newValue);
+    // permet de changer l'état de la collapse 
+    setCollapsed(!collapsed);
   };
 
   return (
@@ -32,10 +33,10 @@ const Select = ({
           </li>
           {!collapsed && (
             <>
-              {!titleEmpty && (
+              {!titleEmpty &&  (
                 <li onClick={() => changeValue(null)}>
-                  <input defaultChecked={!value} name="selected" type="radio" />{" "}
-                  Toutes
+                  <input  defaultChecked={null} name="selected" type="radio"  />{" "}
+                 Toutes
                 </li>
               )}
               {selection.map((s) => (
